@@ -8,26 +8,55 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- link Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- link google font -->
+    <!-- link google font rubik -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <!-- custom rubik font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- style css -->
     <style>
+        /* custom font */
         .font-rubik {
             font-family: 'Rubik', sans-serif;
+        }
+
+        .font-bebas-neue {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .font-rowdies {
+            font-family: 'Rowdies', sans-serif;
+        }
+
+        /* custom text shadow */
+        .text-shadow-blue {
+            text-shadow: 2px 2px 4px rgba(173, 216, 230, 0.8); 
+        }
+
+        .text-shadow-black {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        }
+
+        /* custom color */
+        .hover-biru:hover{
+            color: rgba(26, 42, 97, 0.8);
+        }
+
+        .background-color-blue{
+            background-color: 2px 2px 4px rgba(173, 216, 230, 0.8);
         }
     </style>
 </head>
 <body class="bg-black">
-    <header>
-        <nav class="flex bg-white p-3 justify-between items-center rounded-none md:rounded-b-full">
+    <header class="pb-4">
+        <!-- menu navigation -->
+        <nav class="flex bg-blue-200 p-3 justify-between items-center rounded-none md:rounded-b-full">
             <!-- tampilan awal -->
             <div class="flex-1 content-center">
                 <ul class="hidden md:flex gap-4 md:justify-center">
-                    <li><a href="" class="font-rubik">about</a></li>
-                    <li><a href="" class="font-rubik">product</a></li>
-                    <li><a href="" class="font-rubik">contact</a></li>
+                    <li><a href="" class="font-rubik hover-biru">about</a></li>
+                    <li><a href="" class="font-rubik hover-biru">product</a></li>
+                    <li><a href="" class="font-rubik hover-biru">contact</a></li>
                 </ul>
                 
                 <!-- Hamburger Menu -->
@@ -50,7 +79,7 @@
             </div>
         </nav>
 
-        <!-- Mobile Menu -->
+        <!-- menu mobile -->
         <div id="mobile-menu" class="hidden bg-white md:hidden">
             <ul class="flex flex-col gap-4 p-3 items-center">
                 <li><a href="" class="font-rubik">about</a></li>
@@ -58,16 +87,93 @@
                 <li><a href="" class="font-rubik">contact</a></li>
             </ul>
         </div>
+
+        <!-- menu hero -->
+        <hero class="m-20">
+            <div class="grid flex md:grid-cols-2 grid-cols-1 md:flex-row flex-col p-4">
+                <div class="flex justify-center">
+                    <img src="assets/hero2.png" class="w-80">
+                </div>
+
+                <div class="p-4 flex flex-col justify-center items-start">
+                    <h1 class="mb-6 text-3xl font-rowdies text-gray-200 text-shadow-blue">Social Media Management For Your Business</h1>
+                    <p class="text-left font-rubik mb-4 text-gray-100">proses pengelolaan dan pengoptimalan akun media sosial perusahaan untuk meningkatkan kehadiran online dan keterlibatan dengan audiens</p>
+                    <div class="flex flex-col-2 gap-4">
+                        <button class="p-1 border-2 font-rubik px-6 text-gray-100 rounded-2xl hover:text-black hover:bg-white"><a href="">explore</a></button>
+                        <button class="p-1 border-2 font-rubik px-8 text-gray-100 rounded-2xl hover:text-black hover:bg-white">order now</button>
+                    </div>
+                </div>
+            </div>
+        </hero>
     </header>
 
-    <script>
-        // JavaScript untuk toggle menu mobile
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
+    <main>
+        <section id="brand">
+            <div class="px-4 py-12 flex flex-col items-center bg-blue-300">
+                <h1 class="mb-3 text-3xl font-rowdies text-gray-200 text-shadow-black">socialse</h1>
+                <p class="font-rubik text-black text-center">"Membangun Citra Bisnis Dengan Pendekatan Interaktif"</p>
+            </div>
+        </section>
 
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+        <section id="product"></section>
+
+        <section id="choose">
+            <div class="p-12 flex justify-start flex-col">
+                <header>
+                    <h1 class="text-3xl font-rowdies text-gray-200 text-shadow-black mb-16 text-center md:text-left">why choose us ?</h1>
+                </header>
+
+                <main class="grid grid-cols-1 md:grid-cols-3 gap-14">
+                    <div class="flex flex-col text-center">
+                        <i class="fa-solid fa-clock-rotate-left text-white text-2xl mb-8"></i>
+                        <p class="font-rubik text-white text-center mb-3">PELATIHAN</p> 
+                        <p class="font-rubik text-white text-center">Team socialse menyediakan pelatihan manajemen media sosial untuk membantu client memahami strategi, meningkatkan keterlibatan audiens dan konten berkualitas, serta menganalisis kinerja</p>
+                    </div>
+
+                    <div class="flex flex-col text-center">
+                        <i text-white class="fa-brands fa-cuttlefish text-white text-2xl mb-8"></i>
+                        <p class="font-rubik text-white text-center mb-3">CUSTOM</p>
+                        <p class="font-rubik text-white text-center">Team socialse menawarkan opsi custom dalam layanan manajemen media sosial dengan memberikan fleksibilitas kepada client sesuai dengan kebutuhan spesifik layanan client</p>
+                    </div>
+
+                    <div class="flex flex-col text-center">
+                        <i class="fa-solid fa-clock-rotate-left text-white text-2xl mb-8"></i>
+                        <p class="font-rubik text-white text-center mb-3">KONSULTASI</p>
+                        <p class="font-rubik text-white text-center">Team socialse menyediakan konsultasi manajemen media sosial untuk memberikan wawasan dan strategi terbaik guna meningkatkan kehadiran online serta keterlibatan audiens</p>
+                    </div>
+                </main>
+            </div>
+        </section>
+
+        <section id="contact">
+            <main>
+                <div class="bg-red-200 grid grid-cols-2">
+                    <div class="flex justify-center">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.120293674686!2d110.36479467404943!3d-7.77706757715501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a58373fffffff%3A0xa4ec1ca156555926!2sSMK%20Negeri%202%20Yogyakarta!5e0!3m2!1sid!2sid!4v1728060970556!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <div class="flex justify-center bg-blue-200 flex-col">
+                        <h1 class="text-3xl font-rowdies text-gray-200 text-shadow-black mb-16">contact us</h1>
+                        <h3>halo blablabla</h3>
+                        <p>follow us : </p>
+                        <div class="flex-1 content-center">
+                            <ul class="flex gap-4 justify-center">
+                                <li><a href=""><i class="fa-solid fa-heart text-2xl"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-truck-fast text-2xl"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </section>
+
+        <section id="order"></section>
+
+        <section id="riview"></section>
+    </main>
+
+<script src="js/script.js"></script>
 </body>
 </html>
