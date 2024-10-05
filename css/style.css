@@ -1,0 +1,66 @@
+/* custom font */
+.font-rubik {
+    font-family: 'Rubik', sans-serif;
+}
+
+.font-bebas-neue {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-rowdies {
+    font-family: 'Rowdies', sans-serif;
+}
+
+/* custom text shadow */
+.text-shadow-blue {
+    text-shadow: 2px 2px 4px rgba(173, 216, 230, 0.8); 
+}
+
+.text-shadow-black {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+/* custom color */
+.hover-biru:hover{
+    color: rgba(26, 42, 97, 0.8);
+}
+
+.background-color-blue{
+    background-color: 2px 2px 4px rgba(173, 216, 230, 0.8);
+}
+
+
+/* custom our product */
+.product-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+    transform: scale(1.05); /* Memperbesar gambar saat dihover */
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Warna hitam dengan transparansi */
+    transition: opacity 0.3s ease;
+}
+
+.product-item:hover .overlay {
+    opacity: 1; /* Mengubah opacity overlay menjadi 1 saat dihover */
+}
+
+.product-item div {
+    transition: opacity 0.3s ease;
+}
+
+.product-item:hover div {
+    opacity: 1; /* Menampilkan penjelasan saat dihover */
+}

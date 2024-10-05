@@ -6,6 +6,8 @@
     <title>socialse</title>
     <!-- link tailwind css -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- link style css -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- link Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- link google font rubik -->
@@ -13,53 +15,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- style css -->
-    <style>
-        /* custom font */
-        .font-rubik {
-            font-family: 'Rubik', sans-serif;
-        }
-
-        .font-bebas-neue {
-            font-family: 'Bebas Neue', sans-serif;
-        }
-
-        .font-rowdies {
-            font-family: 'Rowdies', sans-serif;
-        }
-
-        /* custom text shadow */
-        .text-shadow-blue {
-            text-shadow: 2px 2px 4px rgba(173, 216, 230, 0.8); 
-        }
-
-        .text-shadow-black {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-        }
-
-        /* custom color */
-        .hover-biru:hover{
-            color: rgba(26, 42, 97, 0.8);
-        }
-
-        .background-color-blue{
-            background-color: 2px 2px 4px rgba(173, 216, 230, 0.8);
-        }
-    </style>
 </head>
 <body class="bg-black">
+    <!-- header -->
     <header class="pb-4">
         <!-- menu navigation -->
-        <nav class="flex bg-blue-200 p-3 justify-between items-center rounded-none md:rounded-b-full">
-            <!-- tampilan awal -->
+        <nav class="flex bg-gray-300 p-3 justify-between items-center rounded-none md:rounded-b-full">
+            <!-- menu -->
             <div class="flex-1 content-center">
+                <!-- pilihan menu -->
                 <ul class="hidden md:flex gap-4 md:justify-center">
-                    <li><a href="" class="font-rubik hover-biru">about</a></li>
-                    <li><a href="" class="font-rubik hover-biru">product</a></li>
-                    <li><a href="" class="font-rubik hover-biru">contact</a></li>
+                    <li><a href="#product" class="font-rubik hover-biru">product</a></li>
+                    <li><a href="#contact" class="font-rubik hover-biru">contact</a></li>
+                    <li><a href="#order" class="font-rubik hover-biru">order</a></li>
                 </ul>
                 
-                <!-- Hamburger Menu -->
+                <!-- hamburger -->
                 <div class="md:hidden justify-center flex items-center ">
                     <button id="hamburger" class="focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
@@ -67,10 +38,12 @@
                 </div>
             </div>
 
+            <!-- img logo -->
             <div class="flex-1 flex justify-center items-center">
                 <img src="assets/logo.png" class="w-32 h-auto">
             </div>
 
+            <!-- icon -->
             <div class="flex-1 content-center">
                 <ul class="flex gap-4 justify-center">
                     <li><a href=""><i class="fa-solid fa-heart text-2xl"></i></a></li>
@@ -79,22 +52,24 @@
             </div>
         </nav>
 
-        <!-- menu mobile -->
-        <div id="mobile-menu" class="hidden bg-white md:hidden">
+        <!-- hamburger mobile  -->
+        <div id="mobile-menu" class="hidden bg-gray-300 md:hidden">
             <ul class="flex flex-col gap-4 p-3 items-center">
-                <li><a href="" class="font-rubik">about</a></li>
                 <li><a href="" class="font-rubik">product</a></li>
                 <li><a href="" class="font-rubik">contact</a></li>
+                <li><a href="" class="font-rubik">order</a></li>
             </ul>
         </div>
 
-        <!-- menu hero -->
+        <!-- hero -->
         <hero class="m-20">
             <div class="grid flex md:grid-cols-2 grid-cols-1 md:flex-row flex-col p-4">
+                <!-- img hero -->
                 <div class="flex justify-center">
                     <img src="assets/hero2.png" class="w-80">
                 </div>
 
+                <!-- title hero -->
                 <div class="p-4 flex flex-col justify-center items-start">
                     <h1 class="mb-6 text-3xl font-rowdies text-gray-200 text-shadow-blue">Social Media Management For Your Business</h1>
                     <p class="text-left font-rubik mb-4 text-gray-100">proses pengelolaan dan pengoptimalan akun media sosial perusahaan untuk meningkatkan kehadiran online dan keterlibatan dengan audiens</p>
@@ -107,61 +82,147 @@
         </hero>
     </header>
 
+    <!-- main -->
     <main>
+        <!-- section brand promise -->
         <section id="brand">
-            <div class="px-4 py-12 flex flex-col items-center bg-blue-300">
+            <!-- title brand promise -->
+            <div class="px-4 py-12 flex flex-col items-center bg-gray-400">
                 <h1 class="mb-3 text-3xl font-rowdies text-gray-200 text-shadow-black">socialse</h1>
                 <p class="font-rubik text-black text-center">"Membangun Citra Bisnis Dengan Pendekatan Interaktif"</p>
             </div>
         </section>
 
-        <section id="product"></section>
+        <!-- section product -->
+        <section id="product">
+            <div class="p-12 pt-28 flex justify-start flex-col">
+                <!-- title product -->
+                <h1 class="text-3xl font-rowdies text-gray-200 text-shadow-black mb-16 text-center md:text-left">our product</h1>
+                <!-- konten product -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+                    <div>
+                        <div class="product-item group">
+                            <img src="assets/konten.png" class="transition-transform duration-300">
+                            <div class="overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-center p-2">Membuat konten yang relevan, menarik, dan sesuai dengan brand</p>
+                            </div>
+                        </div>
+                        <p class="text-white p-5 text-center">Konten</p>
+                    </div>
+        
+                    <div>
+                        <div class="product-item group">
+                            <img src="assets/schec.png" class="transition-transform duration-300">
+                            <div class="overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-center p-2">Mengatur penjadwalan postingan untuk memastikan konsistensi</p>
+                            </div>
+                        </div>
+                        <p class="text-white p-5 text-center">Schedule</p>
+                    </div>
+        
+                    <div>
+                        <div class="product-item group">
+                            <img src="assets/komen.png" class="transition-transform duration-300">
+                            <div class="overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-center p-2">Membalas komentar dan pertanyaan audiens untuk menjaga interaksi aktif</p>
+                            </div>
+                        </div>
+                        <p class="text-white p-5 text-center">QnA</p>
+                    </div>
+        
+                    <div>
+                        <div class="product-item group">
+                            <img src="assets/analisis.png" class="transition-transform duration-300">
+                            <div class="overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-center p-2">Menyusun laporan akhir analisis perkembangan akun bisnis client</p>
+                            </div>
+                        </div>
+                        <p class="text-white p-5 text-center">Analisis</p>
+                    </div>
+                </div>
+            </div>
+        </section>        
 
+        <!-- section choose -->
         <section id="choose">
             <div class="p-12 flex justify-start flex-col">
+                <!-- header choose -->
                 <header>
+                    <!-- title choose -->
                     <h1 class="text-3xl font-rowdies text-gray-200 text-shadow-black mb-16 text-center md:text-left">why choose us ?</h1>
                 </header>
 
-                <main class="grid grid-cols-1 md:grid-cols-3 gap-14">
-                    <div class="flex flex-col text-center">
+                <!-- main choose -->
+                <main class="grid grid-cols-1 md:grid-cols-3">
+                    <!-- konten choose -->
+                    <div class="flex flex-col text-center md:border-r-2 p-6">
                         <i class="fa-solid fa-clock-rotate-left text-white text-2xl mb-8"></i>
                         <p class="font-rubik text-white text-center mb-3">PELATIHAN</p> 
-                        <p class="font-rubik text-white text-center">Team socialse menyediakan pelatihan manajemen media sosial untuk membantu client memahami strategi, meningkatkan keterlibatan audiens dan konten berkualitas, serta menganalisis kinerja</p>
+                        <p class="font-rubik text-white text-center">Team socialse menyediakan pelatihan manajemen media sosial untuk membantu client memahami strategi serta meningkatkan keterlibatan audiens dan konten yang berkualitas</p>
                     </div>
 
-                    <div class="flex flex-col text-center">
+                    <div class="flex flex-col text-center md:border-r-2 md:border-b-none p-6">
                         <i text-white class="fa-brands fa-cuttlefish text-white text-2xl mb-8"></i>
                         <p class="font-rubik text-white text-center mb-3">CUSTOM</p>
                         <p class="font-rubik text-white text-center">Team socialse menawarkan opsi custom dalam layanan manajemen media sosial dengan memberikan fleksibilitas kepada client sesuai dengan kebutuhan spesifik layanan client</p>
                     </div>
 
-                    <div class="flex flex-col text-center">
+                    <div class="flex flex-col text-center p-6">
                         <i class="fa-solid fa-clock-rotate-left text-white text-2xl mb-8"></i>
                         <p class="font-rubik text-white text-center mb-3">KONSULTASI</p>
-                        <p class="font-rubik text-white text-center">Team socialse menyediakan konsultasi manajemen media sosial untuk memberikan wawasan dan strategi terbaik guna meningkatkan kehadiran online serta keterlibatan audiens</p>
+                        <p class="font-rubik text-white text-center">Team socialse menyediakan konsultasi manajemen media sosial untuk memberikan wawasan dan strategi guna meningkatkan kehadiran online serta keterlibatan audiens</p>
                     </div>
                 </main>
             </div>
         </section>
 
+        <!-- section contact -->
         <section id="contact">
             <main>
-                <div class="bg-red-200 grid grid-cols-2">
-                    <div class="flex justify-center">
+                <!-- konten contact -->
+                <div class="grid grid-cols-1 p-3 md:grid-cols-2">
+                    <!-- maps -->
+                    <div class="flex justify-center order-2 md:order-1 items-center">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.120293674686!2d110.36479467404943!3d-7.77706757715501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a58373fffffff%3A0xa4ec1ca156555926!2sSMK%20Negeri%202%20Yogyakarta!5e0!3m2!1sid!2sid!4v1728060970556!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.120293674686!2d110.36479467404943!3d-7.77706757715501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a58373fffffff%3A0xa4ec1ca156555926!2sSMK%20Negeri%202%20Yogyakarta!5e0!3m2!1sid!2sid!4v1728060970556!5m2!1sid!2sid" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade" 
+                            class="rounded-2xl">
                         </iframe>
                     </div>
 
-                    <div class="flex justify-center bg-blue-200 flex-col">
-                        <h1 class="text-3xl font-rowdies text-gray-200 text-shadow-black mb-16">contact us</h1>
-                        <h3>halo blablabla</h3>
-                        <p>follow us : </p>
-                        <div class="flex-1 content-center">
+                    <!-- penjelasan -->
+                    <div class="flex justify-center flex-col text-center order-1 md:order-2">
+                        <div class="p-10">
+                            <!-- title contact -->
+                            <h1 class="text-3xl font-rowdies text-gray-200 text-shadow-black mb-20 md:mb-12 md:text-left">contact us</h1>
+                            <h3 class="text-left text-white pb-3">socialse di sini untuk membantu Anda!</h3>
+                            <p class="text-left text-white pb-2">Jika Anda memiliki pertanyaan, komentar, atau butuh bantuan terkait produk atau layanan kami, jangan ragu untuk menghubungi tim dukungan pelanggan kami.</p>
+                            <div class="p-6">
+                                <!-- alamat, telp, email -->
+                                <ul class="text-left">
+                                    <li class="mb-2 flex"><a href="" class="flex"><i class="fa-solid fa-location-dot text-xl text-white pr-1.5"></i></a><span class="ml-2 text-white">Alamat : Jl. Bantul KM 8,5</span></li>
+                                    <li class="mb-2"><a href=""><i class="fa-solid fa-phone-flip text-xl text-white"></i></a><span class="ml-2 text-white">Phone : 085713685277</span></li>
+                                    <li><a href=""><i class="fa-solid fa-envelope text-xl text-white"></i></a><span class="ml-2 text-white">Email : socialse@gmail.com</span></li>
+                                </ul>
+                            </div>
+                            <p class="text-left text-white">Follow Us :</p>
+                        </div>
+
+                        <!-- icon follow us -->
+                        <div class="flex-1 content-center pb-14">
                             <ul class="flex gap-4 justify-center">
-                                <li><a href=""><i class="fa-solid fa-heart text-2xl"></i></a></li>
-                                <li><a href=""><i class="fa-solid fa-truck-fast text-2xl"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-whatsapp text-3xl text-green-300"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-facebook text-3xl text-blue-800"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram text-3xl text-red-600"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -169,7 +230,112 @@
             </main>
         </section>
 
-        <section id="order"></section>
+        <!-- section order -->
+        <section id="order">
+            <header>
+                <h1 class="text-3xl font-rowdies text-gray-200 text-shadow-black p-10 mb-10 text-center md:text-left">let's order socialse</h1>
+            </header>
+
+            <main>
+                <div>
+                    <div class="grid grid-rows-6 grid-cols-2 gap-4 p-2 md:px-24">
+                        <!-- Baris Pertama -->
+                        <div class="bg-red-100 row-span-2 col-span-2 md:col-span-1 p-8 text-center flex flex-col items-center justify-center">
+                            <img src="assets/1.png" class="w-32 mb-4">
+                            <h2 class="mb-2">Konten 01</h2>
+                            <div class="text-center flex gap-2">
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded">$45</button>
+                                <a href="">
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Add</button>
+                                </a>
+                            </div>
+                        </div>
+                    
+                        <div class="bg-green-100 col-span-2 md:col-span-1 p-8 text-center flex flex-col items-center justify-center">
+                            <img src="assets/1.png" class="w-32 mb-4">
+                            <h2 class="mb-2">Konten 02</h2>
+                            <div class="text-center flex gap-2">
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded">$45</button>
+                                <a href="">
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Add</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-100 row-span-2 col-span-1 p-8 text-center flex flex-col items-center justify-center">
+                            <img src="assets/1.png" class="w-32 mb-4">
+                            <h2 class="mb-2">Konten 04</h2>
+                            <div class="text-center flex gap-2">
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded">$45</button>
+                                <a href="">
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Add</button>
+                                </a>
+                            </div>
+                        </div>
+                    
+                        <!-- Baris Kedua -->
+                        <div class="bg-green-100 col-span-1 p-8 text-center flex flex-col items-center justify-center">
+                            <img src="assets/1.png" class="w-32 mb-4">
+                            <h2 class="mb-2">Konten 03</h2>
+                            <div class="text-center flex gap-2">
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded">$45</button>
+                                <a href="">
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Add</button>
+                                </a>
+                            </div>
+                        </div>
+                    
+                        <!-- Baris Ketiga -->
+                        <div class="bg-blue-100 row-span-2 col-span-1 p-8 text-center flex flex-col items-center justify-center">
+                            <img src="assets/1.png" class="w-32 mb-4">
+                            <h2 class="mb-2">Konten 04</h2>
+                            <div class="text-center flex gap-2">
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded">$45</button>
+                                <a href="">
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Add</button>
+                                </a>
+                            </div>
+                        </div>
+                    
+                        <div class="bg-green-100 col-span-1 p-8 text-center flex flex-col items-center justify-center">
+                            <img src="assets/1.png" class="w-32 mb-4">
+                            <h2 class="mb-2">Konten 06</h2>
+                            <div class="text-center flex gap-2">
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded">$45</button>
+                                <a href="">
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Add</button>
+                                </a>
+                            </div>
+                        </div>
+                    
+                        <!-- Baris Keempat -->
+                        <div class="bg-red-100 row-span-2 col-span-1 p-8 text-center flex flex-col items-center justify-center">
+                            <img src="assets/1.png" class="w-32 mb-4">
+                            <h2 class="mb-2">Konten 095</h2>
+                            <div class="text-center flex gap-2">
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded">$45</button>
+                                <a href="">
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Add</button>
+                                </a>
+                            </div>
+                        </div>
+                    
+                        <div class="bg-red-100 row-span-2 col-span-1 p-8 text-center flex flex-col items-center justify-center">
+                            <img src="assets/1.png" class="w-32 mb-4">
+                            <h2 class="mb-2">Konten 85</h2>
+                            <div class="text-center flex gap-2">
+                                <button class="bg-blue-500 text-white px-4 py-2 rounded">$45</button>
+                                <a href="">
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Add</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </main>
+        </section>
 
         <section id="riview"></section>
     </main>
