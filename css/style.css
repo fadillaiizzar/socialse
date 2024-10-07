@@ -64,3 +64,7 @@
 .product-item:hover div {
     opacity: 1; /* Menampilkan penjelasan saat dihover */
 }
+
+.bgbiru{
+    background-image: url('/assets/bg\ bliuw.jpeg');
+}
