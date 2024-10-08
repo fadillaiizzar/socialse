@@ -25,10 +25,53 @@
     color: rgba(26, 42, 97, 0.8);
 }
 
+.bg-gr:hover{
+    background-color: #374254;
+}
+
 .background-color-blue{
     background-color: 2px 2px 4px rgba(173, 216, 230, 0.8);
 }
 
+p{
+    color: #0e1424;
+}
+
+.bg-dark-blue{
+    background-color: #0e1424;
+}
+
+.color-dark-blue{
+    color: #0e1424;
+}
+
+.bg-blue{
+    background-color: #adbbc6;
+}
+
+.color-blue{
+    color: #adbbc6;
+}
+
+.bg-cream{
+    background-color: #ececec;
+}
+
+.color-cream{
+    color: #ececec;
+}
+
+.bg-gray{
+    background-color: #374254;
+}
+
+.color-gray{
+    color: #374254;
+}
+
+.custom-hover-bg:hover {
+    background-color: #0e1424;
+}
 
 /* custom our product */
 .product-item {
@@ -67,4 +110,19 @@
 
 .bgbiru{
     background-image: url('../assets/bliuw.jpeg');
+}
+
+.bgray{
+    background-image: url('../assets/bgray.jpeg');
+    background-position: top;
+}
+
+.maps{
+    border-color: #0e1424;
+}
+
+@media (min-width: 768px) {
+    .md-w-500 {
+        width: 500px;
+    }
 }
