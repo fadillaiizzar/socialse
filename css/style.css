@@ -121,6 +121,8 @@ p{
     border-color: #0e1424;
 }
 
+
+
 @media (min-width: 768px) {
     .md-w-500 {
         width: 500px;
