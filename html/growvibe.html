@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>socialse</title>
+        <!-- link tailwind css -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <!-- link style css -->
+        <link rel="stylesheet" href="/css/style.css">
+        <!-- link Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- link google font rubik -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- link data aos -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+<body class="bg-cream">
+    <!-- header -->
+    <header class="pb-10" id="home" >
+        <!-- menu navigation -->
+        <nav class="flex bg-dark-blue p-3 justify-between items-center rounded-none md:rounded-b-full">
+            <!-- menu -->
+            <div class="flex-1 content-center">
+                <!-- pilihan menu -->
+                <ul class="hidden md:flex gap-4 md:justify-center">
+                    <li><a href="#home" class="font-rubik color-cream hover:text-blue-200">home</a></li>
+                    <li><a href="#services" class="font-rubik color-cream hover:text-blue-200">services</a></li>
+                    <li><a href="#order" class="font-rubik color-cream hover:text-blue-200">order</a></li>
+                </ul>
+                
+                <!-- hamburger -->
+                <div class="md:hidden justify-center flex items-center ">
+                    <button id="hamburger" class="focus:outline-none">
+                        <i class="fas fa-bars text-xl color-cream hover:text-blue-200"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- img logo -->
+            <div class="flex-1 flex justify-center items-center">
+                <img src="/assets/logo-white.png" class="w-32 h-auto">
+            </div>
+
+            <!-- icon -->
+            <div class="flex-1 content-center">
+                <ul class="flex gap-4 justify-center">
+                    <li><a href="#riview"><i class="fa-solid fa-comment-dots text-xl color-cream hover:text-blue-200"></i></a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-id-badge text-xl color-cream hover:text-blue-200"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- hamburger mobile  -->
+        <div id="mobile-menu" class="hidden bg-dark-blue md:hidden">
+            <ul class="flex flex-col gap-4 p-3 items-center">
+                <li><a href="#home" class="font-rubik color-cream">home</a></li>
+                <li><a href="#services" class="font-rubik color-cream">services</a></li>
+                <li><a href="#order" class="font-rubik color-cream">order</a></li>
+                <li><a href="#riview" class="font-rubik color-cream">riview</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="mb-10">
+        <div id="detail-readmore" class="px-5 md:px-10">
+            <div class="flex justify-between items-center bg-dark-blue rounded-t-3xl">
+                <div class="flex items-center">
+                    <a href="/index.html#order">
+                    <button class="p-3 flex items-center"><i class="fa-solid fa-angle-left color-cream text-2xl pl-3"></i></button>
+                    </a>
+                </div>
+        
+                <div class="flex-grow text-left pl-4">
+                    <p class="color-cream">Detail Your Option</p>
+                </div>
+            </div>              
+
+            <div class=" bg-dark-blue">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-2 pb-4">
+                    <div class="grid grid-cols-1 md:pl-3 md:p-0 p-3">
+                        <div class="bg-cream rounded-tr-lg md:rounded-tr-none rounded-tl-lg  text-center mb-2">
+                            <img src="/assets/grow.png" class="w-60 mx-auto">
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-2 bg-dark-blue justify-items-center text-center">
+                            <img src="/assets/konten.png" class="bg-cream w-full h-full p-2 md:p-7 mx-auto">
+                            <img src="/assets/schec.png" class="bg-cream w-full h-full p-2 md:p-7 mx-auto">
+                            <img src="/assets/komen.png" class="bg-cream w-full h-full p-2 md:p-7 mx-auto">
+                        </div>
+                    </div>
+    
+                    <div class="grid grid-cols-1 pl-3 md:pl-0 pr-3">
+                        <div class="py-8 bg-cream md:rounded-tr-lg text-center content-center">
+                            <h class="text-3xl font-rowdies color-dark-blue">Grow Vibe</h>
+                        </div>
+
+                        <div class="px-4 md:px-8 pb-8 bg-cream row-span-6">
+                            <p class="mb-4">Grow Vibe membantu bisnis menciptakan suasana positif di media sosial melalui pendekatan kreatif dan interaktif</p>
+                            <div>
+                                <p class="mb-2">Layanan Yang Ditawarkan :</p>
+                                <p class="pl-4"><i class="fa-solid fa-hand-holding-heart pr-2"></i>Membuat Konten</p>
+                                <p class="pl-4"><i class="fa-solid fa-hand-holding-heart pr-2"></i>Mengatur Jadwal Postingan</p>
+                                <p class="pl-4"><i class="fa-solid fa-hand-holding-heart pr-2"></i>Menjawab Komentar<span class="block md:inline md:pl-0 pl-7">dan Interaksi</span></p>
+                            </div>
+                            
+                            <div>
+                                <p class="mt-4 mb-2">Harga Yang Ditawarkan :</p>
+                                <p class="pl-4"><i class="fa-solid fa-hand-holding-heart pr-2"></i>Rp950.000,00 / Bulan</p>
+                            </div>
+                            
+                            <div class="flex justify-center">
+                                <button class="p-3 px-7 bg-dark-blue mt-7 text-center rounded-full color-cream hover:bg-gray-700">order now</button>
+                            </div>
+ 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

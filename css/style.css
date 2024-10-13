@@ -53,6 +53,10 @@ p{
     color: #adbbc6;
 }
 
+.color-blue{
+    color: #adbbc6;
+}
+
 .bg-cream{
     background-color: #ececec;
 }
@@ -120,8 +124,6 @@ p{
 .maps{
     border-color: #0e1424;
 }
-
-
 
 @media (min-width: 768px) {
     .md-w-500 {
