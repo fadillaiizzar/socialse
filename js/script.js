@@ -89,3 +89,59 @@ overlayexc.addEventListener('click', () => {
     popupexc.classList.add('hidden');      // Sembunyikan popup
     overlayexc.classList.add('hidden');    // Sembunyikan overlay
 });
+
+
+function validateForm() {
+    var nameInput = document.getElementById('nameinput').value;
+    var emailInput = document.getElementById('emailinput').value;
+    var messageInput = document.getElementById('pesaninput').value;
+    var errorMessage = document.getElementById('errorall');
+    var popupkirim = document.getElementById('popupkirim');
+    const btnclosekirim = document.getElementById('btnclosekirim');
+    const overlaykirim = document.getElementById('overlaykirim');
+    
+    // Check if any input is filled, then all fields must be filled
+    if (nameInput || emailInput || messageInput) {
+        if (!nameInput || !emailInput || !messageInput) {
+            errorMessage.style.display = 'block';
+            return false;
+        }
+    }
+
+    // Email validation: must end with @gmail.com
+    if (!emailInput.endsWith('@gmail.com')) {
+        errorMessage.style.display = 'block';
+        return false;
+    }
+
+    // If all conditions are met, hide error message
+    errorMessage.style.display = 'none';
+
+    // Show the popup instead of alert
+    overlaykirim.classList.remove('hidden');
+    popupkirim.classList.remove('hidden');
+    
+    return true;
+}
+
+// Close button for popup
+const btnclosekirim = document.getElementById('btnclosekirim');
+const overlaykirim = document.getElementById('overlaykirim');
+const popupkirim = document.getElementById('popupkirim');
+const myForm = document.getElementById('myForm');
+
+btnclosekirim.addEventListener('click', () => {
+    // Reset form
+    myForm.reset();
+    // Hide popup
+    popupkirim.classList.add('hidden');   
+    overlaykirim.classList.add('hidden'); 
+});
+
+overlaykirim.addEventListener('click', () => {
+    // Reset form
+    myForm.reset();
+    // Hide popup
+    popupkirim.classList.add('hidden');   
+    overlaykirim.classList.add('hidden'); 
+});
