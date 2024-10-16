@@ -93,35 +93,30 @@ overlayexc.addEventListener('click', () => {
 
 function validateForm() {
     var nameInput = document.getElementById('nameinput').value;
-    var emailInput = document.getElementById('emailinput').value;
     var messageInput = document.getElementById('pesaninput').value;
     var errorMessage = document.getElementById('errorall');
     var popupkirim = document.getElementById('popupkirim');
-    const btnclosekirim = document.getElementById('btnclosekirim');
     const overlaykirim = document.getElementById('overlaykirim');
+
+    function hideErrorMessage() {
+        errorMessage.style.display = 'none';
+    }
     
-    // Check if any input is filled, then all fields must be filled
-    if (nameInput || emailInput || messageInput) {
-        if (!nameInput || !emailInput || !messageInput) {
-            errorMessage.style.display = 'block';
-            return false;
-        }
+    // Cek apakah input "nameinput" dan "pesaninput" diisi
+    if (!nameInput || !messageInput) {
+        errorMessage.style.display = 'block'; // Tampilkan pesan error jika ada input yang kosong
+        setTimeout(hideErrorMessage, 2500);  // Sembunyikan pesan error setelah 3 detik
+        return false;  // Hentikan pengiriman form jika ada input yang kosong
     }
 
-    // Email validation: must end with @gmail.com
-    if (!emailInput.endsWith('@gmail.com')) {
-        errorMessage.style.display = 'block';
-        return false;
-    }
-
-    // If all conditions are met, hide error message
+    // Jika semua input terisi, sembunyikan pesan error
     errorMessage.style.display = 'none';
 
-    // Show the popup instead of alert
+    // Tampilkan popup sukses
     overlaykirim.classList.remove('hidden');
     popupkirim.classList.remove('hidden');
     
-    return true;
+    return true; // Pengiriman form berhasil
 }
 
 // Close button for popup
