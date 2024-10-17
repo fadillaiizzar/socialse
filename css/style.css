@@ -147,7 +147,7 @@ p{
     }
 }
 
-@media (min-width: 600px) and (max-width: 766px) {
+@media (min-width: 600px) and (max-width: 768px) {
     #card-service {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Membuat grid dengan 2 kolom */
